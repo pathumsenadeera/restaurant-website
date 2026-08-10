@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TrustBadges from './components/TrustBadges';
@@ -13,6 +13,19 @@ import CartDrawer from './components/CartDrawer';
 import Footer from './components/Footer';
 
 export default function App() {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('aura-theme') || 'dark';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('aura-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
+
   const [bookingState, setBookingState] = useState({
     date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
     time: '7:30 PM',
@@ -76,6 +89,8 @@ export default function App() {
         cartCount={totalCartCount}
         onOpenCart={() => setIsCartOpen(true)}
         onOpenReservation={() => setIsReservationOpen(false) || setIsReservationOpen(true)}
+        theme={theme}
+        onToggleTheme={toggleTheme}
       />
 
       <Hero 

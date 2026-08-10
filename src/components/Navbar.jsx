@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, UtensilsCrossed, ShoppingBag, Calendar, Menu as MenuIcon, X } from 'lucide-react';
+import { Sparkles, UtensilsCrossed, ShoppingBag, Calendar, Menu as MenuIcon, X, Sun, Moon } from 'lucide-react';
 
-export default function Navbar({ cartCount, onOpenCart, onOpenReservation }) {
+export default function Navbar({ cartCount, onOpenCart, onOpenReservation, theme, onToggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -33,6 +33,16 @@ export default function Navbar({ cartCount, onOpenCart, onOpenReservation }) {
         </ul>
 
         <div className="nav-actions">
+          {/* Theme Toggle Icon Button */}
+          <button 
+            className="btn-icon" 
+            onClick={onToggleTheme} 
+            title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
+            aria-label="Toggle dark/light theme"
+          >
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+
           <button className="btn-icon" onClick={onOpenCart} title="View Order">
             <ShoppingBag size={20} />
             {cartCount > 0 && <span className="badge-dot">{cartCount}</span>}

@@ -31,10 +31,35 @@
   --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.2);
 }
 
+[data-theme="light"] {
+  color-scheme: light;
+  --bg-dark: #f8f6f0;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f3efe6;
+  --bg-glass: rgba(255, 255, 255, 0.9);
+  --bg-input: rgba(0, 0, 0, 0.04);
+
+  --accent-gold: #b38b24;
+  --accent-gold-light: #946f13;
+  --accent-gold-dark: #664b07;
+  --accent-gold-glow: rgba(179, 139, 36, 0.25);
+
+  --text-primary: #171b24;
+  --text-secondary: #4f5666;
+  --text-muted: #7e879a;
+
+  --border-light: rgba(0, 0, 0, 0.09);
+  --border-gold: rgba(179, 139, 36, 0.35);
+
+  --shadow-main: 0 16px 40px rgba(0, 0, 0, 0.07);
+  --shadow-gold: 0 10px 30px rgba(179, 139, 36, 0.15);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 html {
