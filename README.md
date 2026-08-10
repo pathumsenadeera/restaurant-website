@@ -1,16 +1,29 @@
-# React + Vite
+# AURA | Modern Luxury Fine Dining & Oceanfront Lounge
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, highly creative luxury restaurant web application built with **React**, **Vite**, and **Vanilla CSS**. Inspired by moody obsidian dark aesthetics, champagne gold accents, floating table reservation search widget, signature menu dish modals, and interactive customer ordering.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo & Customer Preview
+- **Live GitHub Pages URL**: `https://pathumsenadeera.github.io/aura-restaurant-website/`
+- **Local Dev Server**: `http://localhost:5173/`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 Key Features
+- **Obsidian & Gold Aesthetics**: Deep charcoal dark mode, champagne gold gradients, blurred glassmorphism headers & cards.
+- **Floating Table Finder**: Real-time reservation selector (Date, Time, Party size, Seating zone).
+- **Interactive Menu & Dish Modals**: Categorized menu filtering with high-res dish photos, ingredients breakdown, and Sommelier wine pairing notes.
+- **Online Order Drawer**: Slide-out cart drawer with item quantity controls and instant kitchen order transmission.
+- **Instant Table Confirmation**: Interactive reservation flow with unique reference code generation (`AURA-XXXXXX`).
 
-## React Compiler
+## 🛠️ GitHub Push & Deployment Instructions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Connect Local Repository to GitHub
+```bash
+git remote add origin https://github.com/pathumsenadeera/aura-restaurant-website.git
+git push -u origin main
+```
 
-## Expanding the Oxlint configuration
+### 2. Deploy to GitHub Pages (Live Customer Link)
+```bash
+npm run deploy
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+*(Note: Enable GitHub Pages in your repository settings under **Settings > Pages > Source: gh-pages branch** if required).*
