@@ -19,7 +19,7 @@ export default function Hero({ bookingState, setBookingState, onOpenReservation 
           </div>
 
           <h1 className="hero-title serif-title">
-            Culinary Flavors That <br />
+            Culinary Flavors That <br className="desktop-only" />
             <span className="gold-gradient-text">Stay With You</span>
           </h1>
 
